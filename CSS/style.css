@@ -1,0 +1,146 @@
+:root {
+    --main-bg-color: #101014;
+    --sec-bg-color: #202024;
+    --bg-light-color: #303030;
+    --main-text-color: #fff;
+    --sec-text-color: #A0A0A0;
+    --heading-color: #7797FF;
+}
+/* Global */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Josefin Sans", sans-serif;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
+    color: var(--heading-color);
+}
+img {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+.card {
+    background-color: var(--sec-bg-color);
+    cursor: pointer;
+}
+.card-body {
+    color: var(--main-text-color);
+}
+.badge {
+    padding: 0.4rem 0.7rem;
+    background-color: var(--bg-light-color);
+    color: var(--sec-text-color);
+}
+.price {
+    color: var(--heading-color);
+}
+.my-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--heading-color);
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+.my-btn:hover {
+    background-color: var(--heading-color);
+}
+/* Header */
+header {
+    height: 30vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("../Images/header.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+/* Nav */
+nav {
+    background-color: var(--main-bg-color);
+}
+.navbar-nav {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.navbar-brand {
+    color: var(--sec-color);
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.navbar-brand:focus, .navbar-brand:hover {
+    color: var(--sec-color);
+}
+.navbar-brand img {
+    width: 50px;
+}
+.nav-link {
+    color: var(--white-color);
+}
+.nav-item {
+    position: relative;
+}
+.nav-link::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 8px;
+    left: 8px;
+    background-color: var(--heading-color);
+    transition: all 0.5s ease;
+}
+.nav-item:hover .nav-link::after {
+    width: calc(100% - 16px);
+}
+.navbar-nav .nav-link.active {
+    color: var(--white-color);
+}
+.nav-link:focus, .nav-link:hover {
+    color: var(--white-color);
+}
+.navbar-toggler {
+    color: var(--white-color);
+    border: none;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+.nav-link.active::after {
+    width: calc(100% - 16px);
+}
+@media (max-width: 991px) {
+    .nav-item {
+        width: fit-content;
+    }
+    .nav-link::after {
+        left: 0;
+    }
+    .nav-item:hover .nav-link::after {
+        width: calc(100%);
+    }
+    .nav-link.active::after {
+        width: calc(100%);
+    }
+}
+/* Games */
+.card-img-top {
+    width: 100%;
+}
+/* Datails */
+.details {
+    height: 120vh;
+    background-color: var(--bg-light-color);
+}
+@media (min-width: 991px) {
+    .details {
+        height: 100vh;
+    }
+}
+.btn {
+    --bs-btn-color: var(--main-text-color);
+}
